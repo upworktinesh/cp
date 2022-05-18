@@ -1,0 +1,6 @@
+framework module cp {
+  umbrella header "cp-umbrella.h"
+
+  export *
+  module * { export * }
+}

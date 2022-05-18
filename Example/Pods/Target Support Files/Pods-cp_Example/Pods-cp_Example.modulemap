@@ -1,0 +1,6 @@
+framework module Pods_cp_Example {
+  umbrella header "Pods-cp_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "cp",
+  "version": "0.1.0",
+  "summary": "A short description of cp.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/upworktinesh/cp",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "upworktinesh": "upworktinesh@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/upworktinesh/cp.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "cp/Classes/**/*",
+  "dependencies": {
+    "ObjectMapper": [
+      "~> 3.5"
+    ],
+    "Alamofire": [
+      "4.4"
+    ],
+    "PromiseKit": [
+      "4.0"
+    ],
+    "SwiftyJSON": [
+
+    ]
+  }
+}
