@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'cp'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of cp.'
+  s.summary          = 'This pod is developed to demostrate a POC.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    This pod is just a POC of a concept. latter it will be refectered to use publically.
                        DESC
 
   s.homepage         = 'https://github.com/upworktinesh/cp'
@@ -28,8 +28,10 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/upworktinesh/cp.git', :tag => s.version.to_s }
  
 
-  s.ios.deployment_target = '9.0'
-
+  # s.ios.deployment_target = :ios ,'12.0'
+  s.platform = :ios, '9'
+  s.swift_versions = '4'
+  
   s.source_files = 'cp/Classes/**/*'
   
   # s.resource_bundles = {
@@ -39,7 +41,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ObjectMapper', '~> 3.5'
-  s.dependency 'Alamofire', '4.4'
+  s.dependency 'Alamofire', '~> 4.4'
   s.dependency 'PromiseKit', '4.0'
   s.dependency 'SwiftyJSON'
 end

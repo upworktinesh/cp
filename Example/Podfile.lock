@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.9.1)
   - cp (0.1.0):
-    - Alamofire (= 4.4)
+    - Alamofire (~> 4.4)
     - ObjectMapper (~> 3.5)
     - PromiseKit (= 4.0)
     - SwiftyJSON
@@ -34,12 +34,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  cp: bf2523c07c316dc3c1bdc15c3a3642f20a0a69ee
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  cp: 43b729417ff00138abf5a77e629c03097dafd3fa
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PromiseKit: 97edc7fb2fb7d2c68c8e09d1f79b3ab7bcb6b06a
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: bd0e56cd235cd6e35505085e208502e475ba8dad
+PODFILE CHECKSUM: 41e8ff65f605fdeecf324a1b2349eed326e6d743
 
 COCOAPODS: 1.11.3

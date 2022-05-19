@@ -1,8 +1,8 @@
 {
   "name": "cp",
   "version": "0.1.0",
-  "summary": "A short description of cp.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "This pod is developed to demostrate a POC.",
+  "description": "This pod is just a POC of a concept. latter it will be refectered to use publically.",
   "homepage": "https://github.com/upworktinesh/cp",
   "license": {
     "type": "MIT",
@@ -16,15 +16,16 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "9"
   },
+  "swift_versions": "4",
   "source_files": "cp/Classes/**/*",
   "dependencies": {
     "ObjectMapper": [
       "~> 3.5"
     ],
     "Alamofire": [
-      "4.4"
+      "~> 4.4"
     ],
     "PromiseKit": [
       "4.0"
@@ -32,5 +33,6 @@
     "SwiftyJSON": [
 
     ]
-  }
+  },
+  "swift_version": "4"
 }

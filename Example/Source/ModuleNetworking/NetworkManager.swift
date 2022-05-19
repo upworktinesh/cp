@@ -70,7 +70,7 @@ internal class NetworkManager {
         
     }
     
-    
+    //    MARK:- Get Log ID
     func getLogID(for mealID: String,rawText:String,user_ID:String?,date:Date) -> Promise<Int> {
         
         let date : String = Helper.shared.getDate(date: date).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

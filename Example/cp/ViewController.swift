@@ -17,46 +17,49 @@ class ViewController: UIViewController {
     @IBOutlet var MealId: UILabel!
     @IBOutlet var tagsList: UILabel!
     @IBOutlet var logId: UILabel!
-    
     @IBOutlet var TF: UITextField!
     
-    
-    
     //    MARK:-  Properties
-    let meals : [MealType] = [.Breakfast,.Lunch,.Snacks,.Dinner]
-    var selectedMeal: MealType = .Lunch
-    var tags = [Tags]()
-    
-    var cp = InitializerCl()
-    var tagJson :[JSON] = [JSON.null]
+    let meals           : [MealType]    = [.Breakfast,.Lunch,.Snacks,.Dinner]
+    var selectedMeal    : MealType      = .Lunch
+    var tags            : [Tags]        = [Tags]()
+    var cp              : InitializerCl = InitializerCl()
+    var tagJson         : [JSON]        = [JSON.null]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.callAPI()
     }
+    
+    
     @IBAction func processBtn(_ sender: Any) {
         self.EnteredText.text = self.TF.text
+        self.TF.placeholder = "Enter your diet and press send button"
         cp.textEntry = self.EnteredText.text
         getTags()
         getMealID()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
+    
     func getTags(){
-        let resulst = cp.getTgs().then { result in
+        let res = cp.getTgs().then { result in
             self.gettagss(json: result)
         }.recover { error in
             print(error)
         }
-        print("Get Tags response :",resulst)
-        
+//        let resulst = cp.getTgs().then { result in
+//            self.gettagss(json: result)
+//        }.recover { error in
+//            print(error)
+//        }
+//        print("Get Tags response :",resulst)
     }
+    
     
     func getLogID(id:String){
         self.MealId.text = id
