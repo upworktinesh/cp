@@ -17,7 +17,7 @@ cp is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'cp', :git => 'https://github.com/upworktinesh/cp.git', :branch => '0.1.0'
+pod 'cp', :git => 'https://github.com/upworktinesh/cp.git', :branch => '0.1.3'
 ```
 
 ## Author
