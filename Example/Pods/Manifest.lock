@@ -3,20 +3,8 @@ PODS:
   - cp (0.1.0):
     - Alamofire (~> 4.4)
     - ObjectMapper (~> 3.5)
-    - PromiseKit (= 4.0)
     - SwiftyJSON
   - ObjectMapper (3.5.3)
-  - PromiseKit (4.0.0):
-    - PromiseKit/Foundation (= 4.0.0)
-    - PromiseKit/QuartzCore (= 4.0.0)
-    - PromiseKit/UIKit (= 4.0.0)
-  - PromiseKit/CorePromise (4.0.0)
-  - PromiseKit/Foundation (4.0.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.0.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.0.0):
-    - PromiseKit/CorePromise
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
@@ -26,7 +14,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ObjectMapper
-    - PromiseKit
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -35,9 +22,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  cp: 43b729417ff00138abf5a77e629c03097dafd3fa
+  cp: 12df116e805d2f490c74cc8f2994c5a82bbe5c5d
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  PromiseKit: 97edc7fb2fb7d2c68c8e09d1f79b3ab7bcb6b06a
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
 PODFILE CHECKSUM: 41e8ff65f605fdeecf324a1b2349eed326e6d743

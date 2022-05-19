@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'cp'
-  s.version          = '0.1.0'
+  s.version          = '0.1.3'
   s.summary          = 'This pod is developed to demostrate a POC.'
 
 # This description is used to generate tags and improve search results.
@@ -42,6 +42,6 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ObjectMapper', '~> 3.5'
   s.dependency 'Alamofire', '~> 4.4'
-  s.dependency 'PromiseKit', '4.0'
+#  s.dependency 'PromiseKit', '4.0'
   s.dependency 'SwiftyJSON'
 end

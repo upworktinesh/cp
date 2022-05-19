@@ -9,7 +9,7 @@
 import UIKit
 import cp
 import SwiftyJSON
-import PromiseKit
+
 class ViewController: UIViewController {
 
     //    MARK:- Outlets
@@ -34,11 +34,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func processBtn(_ sender: Any) {
+        self.TF.text = "mango"
         self.EnteredText.text = self.TF.text
         self.TF.placeholder = "Enter your diet and press send button"
         cp.textEntry = self.EnteredText.text
         getTags()
-        getMealID()
+//        getMealID()
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,11 +48,17 @@ class ViewController: UIViewController {
     
     
     func getTags(){
-        let res = cp.getTgs().then { result in
-            self.gettagss(json: result)
-        }.recover { error in
-            print(error)
+        
+        cp.APIManager.GetTags(for: self.TF.text!) { [self] success, error in
+            guard let json = success else {
+                print(error)
+                return
+            }
+            print("Response json:",json)
+            gettagss(json: json)
         }
+//        let result = cp.getTgs()
+//        print(result.0,result.1)
 //        let resulst = cp.getTgs().then { result in
 //            self.gettagss(json: result)
 //        }.recover { error in
@@ -61,24 +68,24 @@ class ViewController: UIViewController {
     }
     
     
-    func getLogID(id:String){
-        self.MealId.text = id
-        let result = cp.GetLogId(for: id, date: Date()).then { id in
-//                print("log id is :",id)
-            self.logId.text = "\(id)"
-        }.recover { error in
-            print(error)
-        }
-    }
+//    func getLogID(id:String){
+//        self.MealId.text = id
+//        let result = cp.GetLogId(for: id, date: Date()).then { id in
+////                print("log id is :",id)
+//            self.logId.text = "\(id)"
+//        }.recover { error in
+//            print(error)
+//        }
+//    }
     
     
-    func getMealID(){
-        let res = cp.getMealId(for: self.selectedMeal).then { id -> () in
-            self.getLogID(id: "\(id)")
-        }.recover { error in
-            print(error)
-        }
-    }
+//    func getMealID(){
+//        let res = cp.getMealId(for: self.selectedMeal).then { id -> () in
+//            self.getLogID(id: "\(id)")
+//        }.recover { error in
+//            print(error)
+//        }
+//    }
     
     
     func gettagss(json:[JSON]){
