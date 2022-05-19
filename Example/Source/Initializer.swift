@@ -12,7 +12,7 @@ import SwiftyJSON
 
 
 
-public final class InitializerCl {
+public class InitializerCl {
     
     // Properties
     public var textEntry: String?
