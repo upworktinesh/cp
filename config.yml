@@ -1,0 +1,2 @@
+- name: CocoaPods Action
+  uses: ty0x2333/cocoapods-action@0.2.0
